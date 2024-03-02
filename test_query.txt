@@ -1,0 +1,68 @@
+query {
+  totalDays
+  gqlDays {
+    id
+    desc
+    date
+    condition
+  }
+}
+
+mutation {
+  addDay(input:{
+    date: "3/2/2024"
+    desc: "mutataion"
+    condition: BUSY
+  }) {
+    # return string
+    date
+  }
+}
+
+mutation {
+  removeDay(id: "2389bf2f-ffbd-499b-9487-2959a9b16448") {
+    date
+    id
+    desc
+  }
+}
+
+// Self Designed Mocks
+
+mutation {
+  removeDay(id: "124") {
+    day {
+      date
+      desc
+    }
+  }
+}
+
+query {
+  totalDays
+  gqlDays {
+    id
+    desc
+    date
+    condition
+  }
+}
+
+// MockList
+
+query {
+  gqlDays {
+    id
+    desc
+    date
+    condition
+  }
+}
+
+// Suscription
+subscription {
+  newDay {
+    date
+    desc
+  }
+}
