@@ -14,6 +14,7 @@ This project sets up a basic GraphQL server using Apollo Server. It showcases ho
    Run the following command in your terminal to create a new Node.js project:
    ```bash
    npm init -y
+   ```
 
 #### 2. Install Dependencies
     Install necessary packages for development:
